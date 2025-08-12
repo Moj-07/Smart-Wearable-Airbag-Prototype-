@@ -1,0 +1,50 @@
+ Source:  https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data
+
+
+
+Code: 
+import pandas as pd
+
+# Load the dataset
+df = pd.read_csv('cardio_train.csv')
+
+# Quick look
+print(df.head())
+print("Hello")
+print(df.info())
+# Randomly select 25,000 rows from the dataset
+df_25k = df.sample(n=25000, random_state=42)
+
+# Optional: Reset the index
+df_25k.reset_index(drop=True, inplace=True)
+print(df_25k.columns.tolist())
+X = df_25k.drop('Heart_Disease', axis=1)
+y = df_25k['Heart_Disease']
+print(X.head())           # shows first few rows of input features
+print(y.value_counts())   # shows how many 0s and 1s
+print(X.head())           # shows first few rows of input features
+print(y.value_counts())   # shows how many 0s and 1s
+
+
+
+import shap // For Explaining how much importance our ML model gave to which feature of the dataset
+shap.initjs()
+
+explainer = shap.TreeExplainer(best_model)
+shap_values = explainer.shap_values(X_test_selected)
+shap.summary_plot(shap_values, X_test_selected)
+
+
+
+import shap
+
+# Select a single patient's SHAP values (e.g., the first patient in the test set)
+patient_shap_values = shap_values[0]  # Row for the first patient (index 0)
+
+# Get the data for the same patient
+patient_data = X_test_selected[0]  # First patient's data (you can change the index for a different patient)
+
+# Visualize the SHAP explanation for this patient
+shap.force_plot(explainer.expected_value, patient_shap_values, patient_data)
+
+

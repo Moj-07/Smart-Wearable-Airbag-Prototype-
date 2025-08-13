@@ -1,4 +1,4 @@
-NOTE: For the Dataset File, the Excel file contains 70k entries which made the file enormous which is why it is not shown on Github. But in order to get the file either contact on insta (id given at the bottom) or find the link address in README
+NOTE: For the Dataset File, the Excel file contains 70k entries which made the file enormous which is why it is not shown on Github. But in order to get the file either contact on insta (id given at the bottom) or find the link address in the CODE File.
 
 # Smart-Wearable-Airbag-Prototype
 

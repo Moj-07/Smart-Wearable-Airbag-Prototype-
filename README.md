@@ -51,4 +51,4 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 Pull requests are welcome! If you want to improve the design or code,  
 please fork the repository and submit a PR.
 
-Contact: 
+Contact on insta: https://www.instagram.com/moses.john07?igsh=Z3lxbG40ZmduOHVm

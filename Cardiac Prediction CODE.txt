@@ -1,4 +1,4 @@
- Source:  https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data
+Dataset Source:  https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data
 
 
 
@@ -46,5 +46,6 @@ patient_data = X_test_selected[0]  # First patient's data (you can change the in
 
 # Visualize the SHAP explanation for this patient
 shap.force_plot(explainer.expected_value, patient_shap_values, patient_data)
+
 
 
